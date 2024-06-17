@@ -11,18 +11,6 @@ body{
 .navbar {
     overflow: hidden;
 }
-.navbar a {
-    float: left;
-    display: block;
-    color: white;
-    text-align: center;
-    padding: 14px 20px;
-    text-decoration: none;
-}
-.navbar a:hover {
-    background-color: #ddd;
-    color: rgba(0, 0, 0, 0.5);
-}
 .dropdown {
     float: right;
     overflow: hidden;
@@ -38,7 +26,7 @@ body{
     margin: 0;
 }
 
-.navbar a, .dropdown .dropbtn {
+.dropdown .dropbtn {
     cursor: pointer;
 }
 
@@ -81,13 +69,13 @@ body{
     right: 0;
 }
 .body1{
-    background-image: url('img/alexey-malakhov-LZVkAbIw74Q-unsplash.jpg');
+    background-image: url('img/marius-oprea-TQ0pWM6vc0A-unsplash.jpg');
 }
 .body2{
-    background-image: url('img/clay-banks-76vR6cpTico-unsplash.jpg');
+    background-image: url('img/alexey-malakhov-LZVkAbIw74Q-unsplash.jpg');
 }
 .body3{
-    background-image: url('img/marius-oprea-TQ0pWM6vc0A-unsplash.jpg');
+    background-image: url('img/clay-banks-76vR6cpTico-unsplash.jpg');
 }
 .body{
     background-image: url('img/gijs-coolen-CRmcBeINxtg-unsplash.jpg');

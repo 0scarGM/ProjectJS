@@ -52,6 +52,7 @@ function carga(){
     } else {
         usuario = JSON.parse(localStorage.getItem("usuario"))
     }
+    
     switch(localStorage.getItem("body")){
         case "1":
             body.classList.add("body1")
