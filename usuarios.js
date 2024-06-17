@@ -13,31 +13,29 @@ let tema2=document.getElementById("tema2")
 let tema3=document.getElementById("tema3")
 let body=document.getElementById("body")
 
-tema.addEventListener("click",()=>{
-    body.classList.add("body")
+function remobeAllClass(){
+    body.classList.remove("body")
     body.classList.remove("body1")
     body.classList.remove("body2")
     body.classList.remove("body3")
+}
+tema.addEventListener("click",()=>{
+    remobeAllClass()
+    body.classList.add("body")
     localStorage.setItem("body", 0)
 })
 tema1.addEventListener("click",()=>{
-    body.classList.remove("body")
+    remobeAllClass()
     body.classList.add("body1")
-    body.classList.remove("body2")
-    body.classList.remove("body3")
     localStorage.setItem("body", 1)
 })
 tema2.addEventListener("click",()=>{
-    body.classList.remove("body")
-    body.classList.remove("body1")
+    remobeAllClass()
     body.classList.add("body2")
-    body.classList.remove("body3")
     localStorage.setItem("body", 2)
 })
 tema3.addEventListener("click",()=>{
-    body.classList.remove("body")
-    body.classList.remove("body1")
-    body.classList.remove("body2")
+    remobeAllClass()
     body.classList.add("body3")
     localStorage.setItem("body", 3)
 })
