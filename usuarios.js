@@ -73,11 +73,27 @@ bregistro.addEventListener("click", () =>{
         correo: correo.value,
         contraseña: contraseña.value
     }
-    usuario.push(usuarioo)
+
+    if(nombre.value ==="" || correo.value ==="" || contraseña.value ===""){
+        alert("Llena todos los campos")
+    }
+   else{
+    let nombrevr = usuario.find(usuarioo => usuarioo.nombre === nombre.value)
+    let correovr = usuario.find(usuarioo => usuarioo.correo === correo.value)
+    if(nombrevr){
+        alert("Nombre ya registrado")
+    }
+    else if(correovr){
+        alert("Correo ya registrado")
+    }
+    else{
+        usuario.push(usuarioo)
 
     localStorage.setItem("usuario", JSON.stringify(usuario))
-    
+
     carga()
+      }
+    }
 })
 
 biniciar.addEventListener("click", () =>{
@@ -86,16 +102,24 @@ biniciar.addEventListener("click", () =>{
         correo: correo.value,
         contraseña: contraseña.value
     }
+    if(nombre.value ==="" || correo.value ==="" || contraseña.value ===""){
+        alert("Llena todos los campos")
+    }
+    else if(nombre.value !=="" || correo.value !=="" || contraseña.value !==""){ 
 
     let nombreed= usuario.find(usuarioo => usuarioo.nombre === usu.nombre)
     let correoed=usuario.find(usuarioo => usuarioo.correo === usu.correo)
     let contraseñaed=usuario.find(usuarioo => usuarioo.contraseña === usu.contraseña)
+    
 
     if (nombreed && correoed && contraseñaed) {
 
             carga()
+
             alert("bienvenido")
+
         } else {
           alert("Usuario no encontrado")
         }
+    }
 })
