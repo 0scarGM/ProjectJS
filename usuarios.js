@@ -1,6 +1,8 @@
 let nombre = document.getElementById("nombre")
 let correo = document.getElementById("correo")
 let contraseña = document.getElementById("contraseña")
+let nombrecorreo = document.getElementById("nombrecorreo")
+let contraseñain = document.getElementById("contraseñain")
 
 let biniciar = document.getElementById("Iniciar")
 let bregistro = document.getElementById("Registrarse")
@@ -97,22 +99,20 @@ bregistro.addEventListener("click", () =>{
 })
 
 biniciar.addEventListener("click", () =>{
-    let usu = {
-        nombre: nombre.value,
-        correo: correo.value,
-        contraseña: contraseña.value
+   let usu = {
+        nombrecorreo: nombrecorreo.value,
+        contraseñain: contraseñain.value
     }
-    if(nombre.value ==="" || correo.value ==="" || contraseña.value ===""){
+    if(nombrecorreo.value ==="" || contraseñain.value ===""){
         alert("Llena todos los campos")
     }
-    else if(nombre.value !=="" || correo.value !=="" || contraseña.value !==""){ 
+    else if(nombrecorreo.value !=="" || contraseñain.value !==""){ 
+        
+    let nombrecorreoed=usuario.find(usuarioo => usuarioo.nombre === usu.nombrecorreo) || usuario.find(usuarioo => usuarioo.correo === usu.nombrecorreo)
 
-    let nombreed= usuario.find(usuarioo => usuarioo.nombre === usu.nombre)
-    let correoed=usuario.find(usuarioo => usuarioo.correo === usu.correo)
-    let contraseñaed=usuario.find(usuarioo => usuarioo.contraseña === usu.contraseña)
-    
+    let contraseñaed=usuario.find(usuarioo => usuarioo.contraseña === usu.contraseñain)
 
-    if (nombreed && correoed && contraseñaed) {
+    if (nombrecorreoed && contraseñaed) {
 
             carga()
 
